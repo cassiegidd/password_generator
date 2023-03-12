@@ -36,13 +36,13 @@ function getUserInput() { //function begins when 'writePassword' function is cal
     
     //ISSUE: the sinlge true conditional statements cause an error
     else if (upperCase===true && lowerCase===false && specialNum===false) {
-      userOptions = upperCaseOptions; // if user chooses only uppercase characters, variable upperCaseOptions is stored as the value of userOptions
+      userOptions = upperCaseOptions + upperCaseOptions; // if user chooses only uppercase characters, variable upperCaseOptions is stored as the value of userOptions
     } 
     else if (upperCase===false && lowerCase===true && specialNum===false) {  
-      userOptions = lowerCaseOptions; //if user chooses only lowercase characters, variable lowerCaseOptions is stored as the value of userOptions
+      userOptions = lowerCaseOptions + lowerCaseOptions; //if user chooses only lowercase characters, variable lowerCaseOptions is stored as the value of userOptions
     }
     else if (upperCase===false && lowerCase===false && specialNum===true) {
-      userOptions = specialNumOptions; //if user chooses only special characters and numbers, variable specialNumOptions is stored as the value of userOptions
+      userOptions = specialNumOptions + specialNumOptions; //if user chooses only special characters and numbers, variable specialNumOptions is stored as the value of userOptions
     }
     else if (upperCase===true && lowerCase===true && specialNum===true) {
       userOptions = upperCaseOptions + lowerCaseOptions + specialNumOptions; //variables upperCaseOptions, lowerCaseOptions, and specialNumOptions are stored as the value of userOptions
