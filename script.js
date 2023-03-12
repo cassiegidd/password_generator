@@ -2,11 +2,11 @@
 // make prompts for each criteria
 // store the value of each criteria input
 var generateBtn = document.querySelector("#generate");
-var userOptions = "";
+var charSet = "";
 var upperCaseOptions = ["ABCDEFGHIJKLMNOPQRSTVWXYZ"];
 var lowerCaseOptions = ["abcdefghijklmnopqrstuvwxyz"];
 var specialNumOptions = ["!@#$%^&*1234567890"];
-
+var length = "";
 // Write password to the #password input
 function getUserInput() {
   var userLength = prompt("Choose the length of your password- between 8 & 128 characters");
@@ -47,21 +47,40 @@ function getUserInput() {
     else if (upperCase===true && lowerCase===false && specialNum===true) {
       userOptions = upperCaseOptions + specialNumOptions;
     }
+    else if (upperCase===false && lowerCase===true && specialNum===false) {  
+    }
+    else if (upperCase===true && lowerCase===true && specialNum===false) {
+    }
+    else if (upperCase===true && lowerCase===false && specialNum===false) {
+    }
     else {
       return;
     }  
   };
+  length = userLength;
+  charSet = userOptions;
   
-
   //testing for values: remove before deploying
   console.log(userLength);
   console.log(userOptions);
 } 
-function writePassword() {
+
+function generatePassword() {
+  console.log(charSet);
+  var password = "";
+  for (let i = 0; i < length; i++) {
+    password += charSet.charAt(Math.floor(Math.random()*charSet.length));
+  }
+  return password;
+}  
+  
+
+  function writePassword() {
   getUserInput();
-  var generate = generatePassword();
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  passwordText.value = generate;
+  passwordText.value = password;
+
 }
 
 
