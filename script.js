@@ -48,10 +48,13 @@ function getUserInput() {
       userOptions = upperCaseOptions + specialNumOptions;
     }
     else if (upperCase===false && lowerCase===true && specialNum===false) {  
+      userOptions = lowerCaseOptions;
     }
     else if (upperCase===true && lowerCase===true && specialNum===false) {
+      userOptions = upperCaseOptions + lowerCaseOptions;
     }
     else if (upperCase===true && lowerCase===false && specialNum===false) {
+      userOptions = upperCaseOptions;
     }
     else {
       return;
