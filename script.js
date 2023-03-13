@@ -9,32 +9,18 @@ function getUserInput() { //function begins when 'writePassword' function is cal
   var userLength = prompt("Choose the length of your password- between 8 & 128 characters"); //creating a prompt to retrieve and store the chosen length of the password
   var userOptions = ""; //creating an empty variable to store the characters the user will be choosing
   if (userLength<8 || userLength>128) { //defining perameters for the length of the password
-    var error1 = confirm("Oops! Be sure to choose a length between 8 & 128."); // if the user chooses a password length outside of length perameters, they will get a reminder alert
-    if (error1 === false) { //if the user selects 'cancel', they will be kicked out of the function
-      return;
-    }
-    else { //if the user selects 'ok', they will be asked for length of password again.
-      getUserInput();
+    var error1 = alert("Oops! Be sure to choose a length between 8 & 128."); // if the user chooses a password length outside of length perameters, they will get a reminder alert
+    getUserInput();
     }  
-    
-    
-    
-    // ISSUE: once they restart the function, the function no longer stores user input data
-  }
   else {  
     var upperCase = confirm("Do you want your password to contain uppercase letters?"); //retrieving and storing boolean value to determine character types
     var lowerCase = confirm("Do you want your password to include lowercase letters?"); //retrieving and storing boolean value to determine character types
     var specialNum = confirm("Do you want your password to contain numeric and special characters?"); //retrieving and storing boolean value to determine character types
     if (upperCase===false && lowerCase===false && specialNum===false) {
-      var error2 = confirm("Oops! Be sure to choose at least one: uppercase letters, lowercase letters, numeric/special characters"); 
-      if (error2 === false || error2 === true) {  
+      var error2 = alert("Oops! Be sure to choose at least one: uppercase letters, lowercase letters, numeric/special characters");  
         getUserInput(); // if user chooses no character types, they are reminded to choose at least one and return to the beginning of function
-      }
     }   
-    
-    
-    
-    //ISSUE: the sinlge true conditional statements cause an error
+    // for single true boolean conditionals, userOptions must have two stored values to satisfy the charAt method
     else if (upperCase===true && lowerCase===false && specialNum===false) {
       userOptions = upperCaseOptions + upperCaseOptions; // if user chooses only uppercase characters, variable upperCaseOptions is stored as the value of userOptions
     } 
