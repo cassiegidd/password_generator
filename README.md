@@ -11,6 +11,7 @@ Working on this project was a challenge and required me to stretch my understand
 This application can be used by anyone wanting a randomly generated password of their chosen length and character preference. The interface and structure is easy to use and understand. 
 
 Live link to deployed application: 
+https://cassiegidd.github.io/password_generator/
 
 <img width="1421" alt="Screen Shot 2023-03-12 at 4 11 26 PM" src="https://user-images.githubusercontent.com/124100826/224578141-957b83be-8c17-4ccd-a210-f1afc5cda618.png">
 
@@ -25,8 +26,6 @@ Live link to deployed application:
 <img width="1419" alt="Screen Shot 2023-03-12 at 4 13 13 PM" src="https://user-images.githubusercontent.com/124100826/224578197-ea4518ef-a233-40df-839b-074419698a9b.png">
 
 ## Credits
-
-While I didn't collaborate in writing the code for this application, I got a lot of help reading forums, stack overflow, MDN docs, W3 Schools and many other online resources. Also, as mentioned previously, this application was assigned with HTML and some basic JavaScript starter code.
 
 ##License
 
